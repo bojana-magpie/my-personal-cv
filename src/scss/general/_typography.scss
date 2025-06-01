@@ -1,0 +1,14 @@
+@use "./variables";
+
+h1 {
+  font-size: 3.25em;
+  color: variables.$headingColor;
+}
+h2 {
+  font-size: 3em;
+  color: variables.$secondaryColor;
+}
+p {
+  color: variables.$adjacentColor;
+}
+section p:first-of-type { font-size: 2em; }

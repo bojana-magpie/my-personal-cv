@@ -1,0 +1,31 @@
+@use "../general/mixins";
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  @include mixins.mobile {
+    width: 100%;
+
+  }
+  @include mixins.tablet {
+    width: 95%;
+  }
+}
+
+.row {
+  flex-wrap: wrap;
+  display: flex;
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: calc(100% / $i);
+    min-height: 1px;
+    @include mixins.mobile {
+      width: 100%;
+    }
+    @include mixins.tablet {
+      width: 50%;
+    }
+  }
+}

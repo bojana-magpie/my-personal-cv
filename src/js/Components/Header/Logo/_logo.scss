@@ -1,0 +1,5 @@
+@use "../../../../scss/general/mixins";
+
+@include mixins.mobile {
+  .header__logo img {width: 60px}
+}

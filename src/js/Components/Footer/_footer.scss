@@ -1,0 +1,33 @@
+@use "../../../scss/general/variables";
+@use "../../../scss/general/mixins";
+
+
+.footer__top {
+  border-bottom: 2px solid #252633;
+  padding-bottom: 20px;
+  .header__menu--mobile-toggle { display: none; }
+  .nav-list--item a {
+    text-decoration: none;
+    color: variables.$adjacentColor;
+  }
+  @include mixins.mobile {
+    .header__menu .header__menu--nav-list {
+      display: block;
+      position: unset;
+    }
+  }
+
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  @include mixins.mobile {
+    justify-content: center;
+    .header__menu { display: none; }
+
+  }
+
+}
+footer .header__menu .header__menu--nav-list  { visibility: visible!important; }

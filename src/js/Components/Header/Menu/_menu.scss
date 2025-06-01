@@ -1,0 +1,38 @@
+@use "../../../../scss/general/variables";
+@use "../../../../scss/general/mixins";
+
+.header__menu {
+  .header__menu--nav-list {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    @include mixins.mobile {
+      display: flex;
+      visibility: hidden;
+      top: 80px;
+      gap: 20px;
+      left: 0;
+      position: fixed;
+      flex-direction: column;
+      width: 100%;
+      background: variables.$primaryColor;
+      text-align: center;
+      padding: 0;
+    }
+    .nav-list--item {
+      margin-right: 40px;
+    }
+    .nav-list--item a {
+      text-decoration: none;
+      color: variables.$adjacentColor;
+    }
+  }
+  .header__menu--mobile-toggle
+  {
+    display: none;
+    @include mixins.mobile {
+      display: inline-block;
+      width: 30px;
+    }
+  }
+}

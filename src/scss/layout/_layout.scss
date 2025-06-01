@@ -1,0 +1,33 @@
+@use "../general/variables";
+@use "../general/mixins";
+@use "./grid";
+@use "../general/typography";
+
+body {
+  background-color: variables.$primaryColor;
+  font-family: variables.$primaryFont;
+  @include mixins.mobile {
+    font-size: 12px;
+  }
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.gradient { @extend %linear-gradient;}
+
+.tech {
+  .header__social--icons {
+    justify-content: center;
+    margin-top: 100px;
+    gap: 100px;
+    @include mixins.mobile { display: flex;}
+    .social--icons--icon {
+      width: 100px;
+
+      @include  mixins.mobile { width: 50px; }
+    }
+  }
+}

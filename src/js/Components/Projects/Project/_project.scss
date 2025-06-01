@@ -1,0 +1,69 @@
+@use "../../../../scss/general/variables";
+@use "../../../../scss/general/mixins";
+
+.project {
+  background: variables.$cardColor;
+  border-radius: 30px;
+  margin: 22px 22px 22px 0; // Remove left margin to fix left spacing
+  gap: 10px;
+  overflow: hidden; // Keeps child elements within rounded corners
+
+  .project__container {
+    padding: 25px 30px 30px 30px; // Added top padding for better spacing
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; // Consistent vertical spacing between elements
+  }
+
+  img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    display: block; // Removes extra space under image
+  }
+
+  .project__title {
+    font-size: 1.75em;
+    color: variables.$secondaryColor;
+    font-weight: 400;
+    margin: 0; // Remove default margins
+  }
+
+  .project__description {
+    font-size: 1.125em;
+    margin: 0; // Remove default margins
+  }
+
+  .project__stack {
+    font-size: 0.875em;
+    margin: 0 0 10px 0; // Added bottom margin only
+  }
+
+  .project__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 15px;
+    gap: 15px; // Ensures spacing when wrapped
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: variables.$whiteColor;
+      text-decoration: underline;
+      padding: 0; // Remove default padding
+      margin: 0; // Remove default margins
+      flex: 1; // Makes links share space equally
+      min-width: max-content; // Prevents wrapping if possible
+
+      img {
+        width: 20px;
+        height: 20px; // Fixed dimensions
+      }
+    }
+  }
+}

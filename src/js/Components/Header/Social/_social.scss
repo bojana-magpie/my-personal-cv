@@ -1,0 +1,12 @@
+@use "../../../../scss/general/mixins";
+
+.header__social--icons
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  .social--icons--icon {
+    margin-right: 15px;
+  }
+  @include mixins.mobile { display: none; }
+}

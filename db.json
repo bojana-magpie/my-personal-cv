@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Space Neo template",
+      "description": "React/HTML/CSS template for Space neo",
+      "stack": "React, HTML, CSS",
+      "link": {
+        "href": "https://space-neo-bojana-magpies-projects.vercel.app/",
+        "title": "Live Preview"
+      },
+      "code": {
+        "href": "https://github.com/bojana-magpie/space__neo",
+        "title": "View Code"
+      }
+    },
+    {
+      "id": 1,
+      "title": "Weather App",
+      "description": "HTML/CSS/React template for weather app",
+      "stack": "HTML, CSS, React",
+      "link": {
+        "href": "https://weather-app-one-delta-68.vercel.app/",
+        "title": "Live Preview"
+      },
+      "code": {
+        "href": "https://github.com/bojana-magpie/weather_app",
+        "title": "View Code"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Best Shop",
+      "description": "HTML/CSS/JS template",
+      "stack": "HTML, CSS, JavaScript",
+      "link": {
+        "href": "https://best-shop-responsive.vercel.app/",
+        "title": "Live Preview"
+      },
+      "code": {
+        "href": "https://github.com/bojana-magpie/best-shop-responsive",
+        "title": "View Code"
+      }
+    }
+  ]
+}
