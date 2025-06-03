@@ -24,24 +24,22 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:3000/projects")
+        fetch("http://localhost:3003/projects")
             .then((response) => {
                 if (!response.ok) throw new Error("Network response was not ok");
                 return response.json();
             })
             .then((data) => {
-                // JSON Server returns array of projects directly at /projects
-                console.log("Fetched projects:", data);
-                const projectsWithImages = data.map((project) => ({
+                setProjects(data.map(project => ({
                     ...project,
                     img: getLocalImage(project.id),
-                }));
-                setProjects(projectsWithImages);
+                })));
             })
             .catch((error) => {
                 console.error("Error fetching projects:", error);
             });
     }, []);
+
 
     if (projects.length === 0) {
         return <p>Loading projects or no projects found.</p>;
