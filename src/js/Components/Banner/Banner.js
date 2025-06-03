@@ -11,7 +11,7 @@ const Banner = () => {
                     Hi 👋. <br/>
                     My name is<br/>
                     <span style={{
-                        background: 'linear-gradient(90deg, gold 0%, deeppink 100%)',
+                        background: 'linear-gradient(90deg, gold 0%, white 100%)',
                         WebkitBackgroundClip: 'text',
                         backgroundClip: 'text',
                         color: 'transparent',

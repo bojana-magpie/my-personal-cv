@@ -41,7 +41,7 @@ const Footer = () => {
                     ]
                 }/>
                 <p>Built by <span style={{
-                    background: 'linear-gradient(90deg, gold 0%, deeppink 100%)',
+                    background: 'linear-gradient(90deg, gold 0%, white 100%)',
                     WebkitBackgroundClip: 'text',
                     backgroundClip: 'text',
                     color: 'transparent',
