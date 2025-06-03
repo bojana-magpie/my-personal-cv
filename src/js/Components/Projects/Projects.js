@@ -24,13 +24,17 @@ const Projects = () => {
     };
 
     useEffect(() => {
-        fetch("http://localhost:3003/projects")
+        fetch("https://raw.githubusercontent.com/bojana-magpie/my-personal-cv/main/db.json")
             .then((response) => {
                 if (!response.ok) throw new Error("Network response was not ok");
                 return response.json();
             })
             .then((data) => {
-                setProjects(data.map(project => ({
+                if (!data.projects) {
+                    console.error("No 'projects' key in response data");
+                    return;
+                }
+                setProjects(data.projects.map(project => ({
                     ...project,
                     img: getLocalImage(project.id),
                 })));
@@ -40,10 +44,6 @@ const Projects = () => {
             });
     }, []);
 
-
-    if (projects.length === 0) {
-        return <p>Loading projects or no projects found.</p>;
-    }
 
     return (
         <div className="projects row">
