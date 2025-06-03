@@ -8,7 +8,7 @@ body {
   font-family: variables.$primaryFont;
   @include mixins.mobile {
     font-size: 12px;
-  }
+ }
 }
 
 section {
